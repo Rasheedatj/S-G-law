@@ -1,0 +1,336 @@
+@import './variables';
+body{
+    background-color: $darkGray;
+    font-family: 'Poppins';
+}
+.hero{
+    background-color: orangered;
+}
+header{
+    padding:25px 35px;
+}
+
+nav{
+    @include flex(row);
+    justify-content: space-between;
+    width: 100%;
+
+    & .nav_right{
+        @include flex(row);
+        justify-content: space-between;
+        width: 50%;
+
+        & a{
+            text-decoration: none;
+            color:$textColor ;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        & a:hover{
+            color: $yellow;
+        }
+
+        & button{
+            background-color: $yellow;
+            color: $textColor;
+            border: 1px solid $yellow;
+            border-radius: 5px;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        & button:hover{
+            background-color: transparent;
+            border: 1px solid $yellow;
+        }
+    }
+}
+
+.hero_2{
+    @include flex(column);
+    width: 100%;
+    gap: 2em;
+    justify-content: center;
+    padding: 5em 0;
+
+     & h1{
+         color: $textColor;
+         font-size: 50px;
+         line-height: 1.5;
+         padding: 0 1.5em;
+         text-align: center;
+     }
+     & button{
+        background-color: $yellow;
+            color: $textColor;
+            border: 1px solid $yellow;
+            border-radius: 5px;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 20px;
+            cursor: pointer;
+     }
+
+     
+     & button:hover{
+        background-color: transparent;
+        border: 1px solid $yellow;
+    }
+}
+
+.statistics{
+    @include flex(row);
+    width: 100%;
+    justify-content: center;
+    padding: 10% 0;
+    gap: 2em;
+
+    & .stat{
+        border: 2px solid $yellow;
+        width: 10%;
+        @include flex(column);
+        justify-content: center;
+        color: $textColor;
+        gap: 2em;
+        padding: 10px 0;
+
+        & p{
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+.who_we_are{
+    background-color: $darkBlue;
+    padding: 4em 15em;
+    @include flex(column);
+    color: $textColor;
+    gap: 2em;
+
+    & h1{
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+
+    & p{
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.area_of_expertise{
+    @include flex(column);
+    gap: 1.5em;
+    padding: 5em 0;
+    width: 100%;
+    justify-content: center;
+    color: $textColor;
+
+    & .title{
+        text-transform: capitalize;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    & .subtitle{
+        font-size: 20px;
+    }
+
+    & .laws{
+        @include flex(row);
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 3em;
+        
+
+        & .law_type{
+            width: 20%;
+            @include flex(column);
+            
+            & h1{
+                text-align: center;
+                padding-top:20px ;
+                padding-bottom: 15px;
+                text-transform: uppercase;
+                font-size: 25px;
+            }
+            & img{
+                border: 1px solid $yellow;
+                padding: 1rem;
+            }
+
+            & p{
+                font-size: 18px;
+                text-align: center;
+            }
+           
+        }
+    }
+}
+
+
+.consultation{
+    background-color: $darkBlue;
+    padding: 4em 0;
+    @include flex(column);
+    justify-content: center;
+    gap: 2em;
+
+    & h1{
+        text-align: center;
+        font-size: 35px;
+        color: $textColor;
+    }
+
+    & button{
+        background-color: $yellow;
+        color: $textColor;
+        border: 1px solid $yellow;
+        border-radius: 5px;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        cursor: pointer;
+
+    }
+
+    & button:hover{
+        background-color: transparent;
+        border: 1px solid $yellow;
+    }
+}
+
+.team{
+    @include flex(column);
+    width: 100%;
+    padding: 5em 0;
+    color: $textColor;
+    justify-content: center;
+    gap: 4em;
+
+    & .title{
+        text-transform: capitalize;
+        font-size: 35px;
+        text-align: center;
+    }
+    & .subtitle{
+        text-align: center;
+        font-size: 20px;
+        padding-top: 1em;
+    }
+
+    & .avatar{
+        @include flex(row);
+        width: 100%;
+        justify-content: center
+    }
+
+    & .team_member{
+        @include flex(column);
+        gap: 1em;
+        width: 20%;
+        
+
+        & h1{
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        & p{
+            font-size: 18px;
+        }
+    }
+}
+
+.reviews{
+    background-color: $darkBlue;
+    padding: 4em 0;
+    @include flex(column);
+    gap: 4em;
+    color: $textColor;
+    width: 100%;
+
+    & .heading{
+        font-size: 35px;
+    }
+
+    & .review_boxes{
+        @include flex(row);
+        width: 100%;
+        justify-content: center;
+        gap: 3em;
+        
+    }
+
+    & .box{
+        width: 30%;
+        @include flex(column);
+        gap: 1em;
+        border: 2px solid $yellow;
+        padding: 2em 3em;
+
+        & h1{
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        & p{
+            text-align: center;
+        }
+    }
+}
+
+.cta{
+    padding: 3em 0;
+    @include flex(column);
+    gap: 3em;
+    color: $textColor;
+
+    & h1{
+        color: $yellow;
+        text-transform: uppercase
+    }
+
+    & .contact{
+        @include flex(row);
+        gap: 3em;
+    }
+
+    & .icon{
+        @include flex(row);
+        gap: 5px;
+
+        & #mail{
+            font-size: 20px;
+            color: $yellow;
+        }
+    }
+}
+
+footer{
+    padding: 3em 1.5em;
+    @include flex(row);
+    justify-content: space-between;
+    background-color: $darkBlue;
+
+    & .part-1{
+        color: $yellow;
+        @include flex(row);
+        gap: 1.5em;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+
+    & .icons{
+        @include flex(row);
+        gap: 3em;
+
+        & #instagram{
+            font-size: 25px;
+            color: $yellow;
+        }
+    }
+}

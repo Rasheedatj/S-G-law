@@ -1,0 +1,343 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(41, 49, 56);
+  font-family: "Poppins";
+}
+
+.hero {
+  background-color: orangered;
+}
+
+header {
+  padding: 25px 35px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+nav .nav_right {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+nav .nav_right a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+nav .nav_right a:hover {
+  color: rgb(184, 155, 94);
+}
+nav .nav_right button {
+  background-color: rgb(184, 155, 94);
+  color: white;
+  border: 1px solid rgb(184, 155, 94);
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+nav .nav_right button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(184, 155, 94);
+}
+
+.hero_2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+  justify-content: center;
+  padding: 5em 0;
+}
+.hero_2 h1 {
+  color: white;
+  font-size: 50px;
+  line-height: 1.5;
+  padding: 0 1.5em;
+  text-align: center;
+}
+.hero_2 button {
+  background-color: rgb(184, 155, 94);
+  color: white;
+  border: 1px solid rgb(184, 155, 94);
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+}
+.hero_2 button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(184, 155, 94);
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  padding: 10% 0;
+  gap: 2em;
+}
+.statistics .stat {
+  border: 2px solid rgb(184, 155, 94);
+  width: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  gap: 2em;
+  padding: 10px 0;
+}
+.statistics .stat p {
+  text-transform: capitalize;
+}
+
+.who_we_are {
+  background-color: rgb(26, 37, 48);
+  padding: 4em 15em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 2em;
+}
+.who_we_are h1 {
+  font-size: 35px;
+  text-transform: capitalize;
+}
+.who_we_are p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.area_of_expertise {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 5em 0;
+  width: 100%;
+  justify-content: center;
+  color: white;
+}
+.area_of_expertise .title {
+  text-transform: capitalize;
+  font-size: 35px;
+  text-align: center;
+}
+.area_of_expertise .subtitle {
+  font-size: 20px;
+}
+.area_of_expertise .laws {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 3em;
+}
+.area_of_expertise .laws .law_type {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.area_of_expertise .laws .law_type h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.area_of_expertise .laws .law_type img {
+  border: 1px solid rgb(184, 155, 94);
+  padding: 1rem;
+}
+.area_of_expertise .laws .law_type p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.consultation {
+  background-color: rgb(26, 37, 48);
+  padding: 4em 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+}
+.consultation h1 {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+.consultation button {
+  background-color: rgb(184, 155, 94);
+  color: white;
+  border: 1px solid rgb(184, 155, 94);
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+}
+.consultation button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(184, 155, 94);
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5em 0;
+  color: white;
+  justify-content: center;
+  gap: 4em;
+}
+.team .title {
+  text-transform: capitalize;
+  font-size: 35px;
+  text-align: center;
+}
+.team .subtitle {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 1em;
+}
+.team .avatar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.team .team_member {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  width: 20%;
+}
+.team .team_member h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.team .team_member p {
+  font-size: 18px;
+}
+
+.reviews {
+  background-color: rgb(26, 37, 48);
+  padding: 4em 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4em;
+  color: white;
+  width: 100%;
+}
+.reviews .heading {
+  font-size: 35px;
+}
+.reviews .review_boxes {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 3em;
+}
+.reviews .box {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  border: 2px solid rgb(184, 155, 94);
+  padding: 2em 3em;
+}
+.reviews .box h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.reviews .box p {
+  text-align: center;
+}
+
+.cta {
+  padding: 3em 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+  color: white;
+}
+.cta h1 {
+  color: rgb(184, 155, 94);
+  text-transform: uppercase;
+}
+.cta .contact {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 3em;
+}
+.cta .icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.cta .icon #mail {
+  font-size: 20px;
+  color: rgb(184, 155, 94);
+}
+
+footer {
+  padding: 3em 1.5em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(26, 37, 48);
+}
+footer .part-1 {
+  color: rgb(184, 155, 94);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5em;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+footer .icons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 3em;
+}
+footer .icons #instagram {
+  font-size: 25px;
+  color: rgb(184, 155, 94);
+}/*# sourceMappingURL=main.css.map */
