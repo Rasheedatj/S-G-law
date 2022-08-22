@@ -4,10 +4,22 @@ body{
     font-family: 'Poppins';
 }
 .hero{
-    background-color: orangered;
+    background-image: url(../../dist/images/hero_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 100;
+}
+.hero::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: rgba(0, 0, 0,.5);
+    z-index: -2;
 }
 header{
     padding:25px 35px;
+    
 }
 
 nav{
@@ -143,12 +155,14 @@ nav{
     & .laws{
         @include flex(row);
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
         margin-top: 3em;
+        padding: 0 5em;
+        gap: 3em;
         
 
         & .law_type{
-            width: 20%;
+            width: 50%;
             @include flex(column);
             
             & h1{
@@ -164,7 +178,7 @@ nav{
             }
 
             & p{
-                font-size: 18px;
+                font-size: 16px;
                 text-align: center;
             }
            
@@ -288,6 +302,11 @@ nav{
     @include flex(column);
     gap: 3em;
     color: $textColor;
+    background-image: url(../../dist/images/cta_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -3;
 
     & h1{
         color: $yellow;
@@ -308,6 +327,14 @@ nav{
             color: $yellow;
         }
     }
+}
+
+.cta::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: rgba(0, 0, 0,.5);
+    z-index: -2;
 }
 
 footer{
