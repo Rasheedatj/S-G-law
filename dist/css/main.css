@@ -8,6 +8,11 @@ body {
   background-color: rgb(41, 49, 56);
   font-family: "Poppins";
 }
+@media screen and (max-width: 420px) {
+  body {
+    width: 100%;
+  }
+}
 
 .hero {
   background-image: url(../../dist/images/hero_bg.jpg);
@@ -15,6 +20,11 @@ body {
   background-size: cover;
   position: relative;
   z-index: 100;
+}
+@media screen and (max-width: 420px) {
+  .hero {
+    background-position: center;
+  }
 }
 
 .hero::after {
@@ -28,6 +38,11 @@ body {
 header {
   padding: 25px 35px;
 }
+@media screen and (max-width: 420px) {
+  header {
+    padding: 15px 10px;
+  }
+}
 
 nav {
   display: flex;
@@ -36,6 +51,11 @@ nav {
   justify-content: space-between;
   width: 100%;
 }
+@media screen and (max-width: 420px) {
+  nav .brand_logo img {
+    width: 90%;
+  }
+}
 nav .nav_right {
   display: flex;
   align-items: center;
@@ -43,11 +63,26 @@ nav .nav_right {
   justify-content: space-between;
   width: 50%;
 }
+@media screen and (max-width: 420px) {
+  nav .nav_right {
+    justify-content: flex-end;
+  }
+}
 nav .nav_right a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   font-size: 16px;
+}
+@media screen and (max-width: 420px) {
+  nav .nav_right a {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  nav .nav_right #contact {
+    display: block;
+  }
 }
 nav .nav_right a:hover {
   color: rgb(184, 155, 94);
@@ -61,6 +96,12 @@ nav .nav_right button {
   text-transform: uppercase;
   font-size: 16px;
   cursor: pointer;
+  outline: none;
+}
+@media screen and (max-width: 420px) {
+  nav .nav_right button {
+    font-size: 14px;
+  }
 }
 nav .nav_right button:hover {
   background-color: transparent;
@@ -83,6 +124,11 @@ nav .nav_right button:hover {
   padding: 0 1.5em;
   text-align: center;
 }
+@media screen and (max-width: 420px) {
+  .hero_2 h1 {
+    font-size: 25px;
+  }
+}
 .hero_2 button {
   background-color: rgb(184, 155, 94);
   color: white;
@@ -92,6 +138,12 @@ nav .nav_right button:hover {
   text-transform: uppercase;
   font-size: 20px;
   cursor: pointer;
+  outline: none;
+}
+@media screen and (max-width: 420px) {
+  .hero_2 button {
+    font-size: 14px;
+  }
 }
 .hero_2 button:hover {
   background-color: transparent;
@@ -107,6 +159,11 @@ nav .nav_right button:hover {
   padding: 10% 0;
   gap: 2em;
 }
+@media screen and (max-width: 420px) {
+  .statistics {
+    flex-wrap: wrap;
+  }
+}
 .statistics .stat {
   border: 2px solid rgb(184, 155, 94);
   width: 10%;
@@ -117,6 +174,11 @@ nav .nav_right button:hover {
   color: white;
   gap: 2em;
   padding: 10px 0;
+}
+@media screen and (max-width: 420px) {
+  .statistics .stat {
+    width: 30%;
+  }
 }
 .statistics .stat p {
   text-transform: capitalize;
@@ -131,6 +193,11 @@ nav .nav_right button:hover {
   color: white;
   gap: 2em;
 }
+@media screen and (max-width: 420px) {
+  .who_we_are {
+    padding: 40px;
+  }
+}
 .who_we_are h1 {
   font-size: 35px;
   text-transform: capitalize;
@@ -138,6 +205,11 @@ nav .nav_right button:hover {
 .who_we_are p {
   font-size: 18px;
   text-align: center;
+}
+@media screen and (max-width: 420px) {
+  .who_we_are p {
+    font-size: 14px;
+  }
 }
 
 .area_of_expertise {
@@ -150,6 +222,11 @@ nav .nav_right button:hover {
   justify-content: center;
   color: white;
 }
+@media screen and (max-width: 420px) {
+  .area_of_expertise {
+    padding: 3em 30px;
+  }
+}
 .area_of_expertise .title {
   text-transform: capitalize;
   font-size: 35px;
@@ -157,6 +234,7 @@ nav .nav_right button:hover {
 }
 .area_of_expertise .subtitle {
   font-size: 20px;
+  text-align: center;
 }
 .area_of_expertise .laws {
   display: flex;
@@ -168,11 +246,24 @@ nav .nav_right button:hover {
   padding: 0 5em;
   gap: 3em;
 }
+@media screen and (max-width: 420px) {
+  .area_of_expertise .laws {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+}
 .area_of_expertise .laws .law_type {
   width: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 420px) {
+  .area_of_expertise .laws .law_type {
+    width: 100%;
+  }
 }
 .area_of_expertise .laws .law_type h1 {
   text-align: center;
@@ -214,6 +305,11 @@ nav .nav_right button:hover {
   font-size: 16px;
   cursor: pointer;
 }
+@media screen and (max-width: 420px) {
+  .consultation button {
+    font-size: 14px;
+  }
+}
 .consultation button:hover {
   background-color: transparent;
   border: 1px solid rgb(184, 155, 94);
@@ -246,12 +342,24 @@ nav .nav_right button:hover {
   width: 100%;
   justify-content: center;
 }
+@media screen and (max-width: 420px) {
+  .team .avatar {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
 .team .team_member {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1em;
   width: 20%;
+}
+@media screen and (max-width: 420px) {
+  .team .team_member {
+    width: 40%;
+    gap: 0.5em;
+  }
 }
 .team .team_member h1 {
   font-size: 18px;
@@ -271,8 +379,18 @@ nav .nav_right button:hover {
   color: white;
   width: 100%;
 }
+@media screen and (max-width: 420px) {
+  .reviews {
+    padding: 4em 30px;
+  }
+}
 .reviews .heading {
   font-size: 35px;
+}
+@media screen and (max-width: 420px) {
+  .reviews .heading {
+    text-align: center;
+  }
 }
 .reviews .review_boxes {
   display: flex;
@@ -282,6 +400,13 @@ nav .nav_right button:hover {
   justify-content: center;
   gap: 3em;
 }
+@media screen and (max-width: 420px) {
+  .reviews .review_boxes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .reviews .box {
   width: 30%;
   display: flex;
@@ -290,6 +415,11 @@ nav .nav_right button:hover {
   gap: 1em;
   border: 2px solid rgb(184, 155, 94);
   padding: 2em 3em;
+}
+@media screen and (max-width: 420px) {
+  .reviews .box {
+    width: 100%;
+  }
 }
 .reviews .box h1 {
   text-transform: uppercase;
@@ -312,6 +442,12 @@ nav .nav_right button:hover {
   position: relative;
   z-index: -3;
 }
+@media screen and (max-width: 420px) {
+  .cta {
+    padding: 3em 30px;
+    background-position: centr;
+  }
+}
 .cta h1 {
   color: rgb(184, 155, 94);
   text-transform: uppercase;
@@ -321,6 +457,18 @@ nav .nav_right button:hover {
   align-items: center;
   flex-direction: row;
   gap: 3em;
+}
+@media screen and (max-width: 420px) {
+  .cta .contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 420px) {
+  .cta .text {
+    text-align: center;
+  }
 }
 .cta .icon {
   display: flex;
@@ -349,6 +497,14 @@ footer {
   justify-content: space-between;
   background-color: rgb(26, 37, 48);
 }
+@media screen and (max-width: 420px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
 footer .part-1 {
   color: rgb(184, 155, 94);
   display: flex;
@@ -357,6 +513,13 @@ footer .part-1 {
   gap: 1.5em;
   text-transform: capitalize;
   font-size: 20px;
+}
+@media screen and (max-width: 420px) {
+  footer .part-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 footer .icons {
   display: flex;

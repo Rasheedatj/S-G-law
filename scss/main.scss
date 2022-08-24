@@ -2,6 +2,9 @@
 body{
     background-color: $darkGray;
     font-family: 'Poppins';
+    @include mobile{
+        width: 100%;
+    }
 }
 .hero{
     background-image: url(../../dist/images/hero_bg.jpg);
@@ -9,6 +12,11 @@ body{
     background-size: cover;
     position: relative;
     z-index: 100;
+
+    @include mobile{
+             background-position: center;
+    }
+
 }
 .hero::after{
     position: absolute;
@@ -19,6 +27,9 @@ body{
 }
 header{
     padding:25px 35px;
+    @include mobile{
+        padding: 15px 10px;
+    }
     
 }
 
@@ -26,17 +37,40 @@ nav{
     @include flex(row);
     justify-content: space-between;
     width: 100%;
+    @include mobile{
+         
+    }
+
+    & .brand_logo img{
+        @include mobile{
+            width: 90%
+        }
+    }
 
     & .nav_right{
         @include flex(row);
         justify-content: space-between;
         width: 50%;
 
+        @include mobile{
+            justify-content: flex-end;
+        }
+    
+
         & a{
             text-decoration: none;
             color:$textColor ;
             text-transform: uppercase;
             font-size: 16px;
+
+            @include mobile{
+                display:none;
+            }
+        }
+        & #contact{
+            @include mobile{
+             display: block;
+            }
         }
 
         & a:hover{
@@ -52,6 +86,11 @@ nav{
             text-transform: uppercase;
             font-size: 16px;
             cursor: pointer;
+            outline: none;
+
+            @include mobile{
+                font-size: 14px;
+            }
         }
 
         & button:hover{
@@ -74,6 +113,10 @@ nav{
          line-height: 1.5;
          padding: 0 1.5em;
          text-align: center;
+
+         @include mobile{
+             font-size: 25px;
+         }
      }
      & button{
         background-color: $yellow;
@@ -84,6 +127,11 @@ nav{
             text-transform: uppercase;
             font-size: 20px;
             cursor: pointer;
+            outline: none;
+
+            @include mobile{
+                font-size: 14px;
+            }
      }
 
      
@@ -100,6 +148,10 @@ nav{
     padding: 10% 0;
     gap: 2em;
 
+    @include mobile{
+             flex-wrap: wrap; 
+    }
+
     & .stat{
         border: 2px solid $yellow;
         width: 10%;
@@ -108,6 +160,10 @@ nav{
         color: $textColor;
         gap: 2em;
         padding: 10px 0;
+
+        @include mobile{
+             width: 30%;
+        }
 
         & p{
             text-transform: capitalize;
@@ -122,15 +178,25 @@ nav{
     @include flex(column);
     color: $textColor;
     gap: 2em;
+    @include mobile{
+             padding: 40px;
+    }
 
     & h1{
         font-size: 35px;
         text-transform: capitalize;
+        @include mobile{
+             
+        }
+
     }
 
     & p{
         font-size: 18px;
         text-align: center;
+        @include mobile{
+             font-size: 14px;
+        }
     }
 }
 
@@ -141,6 +207,9 @@ nav{
     width: 100%;
     justify-content: center;
     color: $textColor;
+    @include mobile{
+             padding: 3em 30px;
+    }
 
     & .title{
         text-transform: capitalize;
@@ -150,6 +219,7 @@ nav{
 
     & .subtitle{
         font-size: 20px;
+        text-align: center
     }
 
     & .laws{
@@ -159,11 +229,18 @@ nav{
         margin-top: 3em;
         padding: 0 5em;
         gap: 3em;
+        @include mobile{
+             @include flex(column);
+             padding: 0;
+        }
         
 
         & .law_type{
             width: 50%;
             @include flex(column);
+            @include mobile{
+             width: 100%;
+            }
             
             & h1{
                 text-align: center;
@@ -210,6 +287,9 @@ nav{
         font-size: 16px;
         cursor: pointer;
 
+        @include mobile{
+            font-size: 14px;
+        }
     }
 
     & button:hover{
@@ -240,13 +320,23 @@ nav{
     & .avatar{
         @include flex(row);
         width: 100%;
-        justify-content: center
+        justify-content: center;
+
+        @include mobile{
+             flex-wrap: wrap;
+             gap: 1em
+        }
     }
 
     & .team_member{
         @include flex(column);
         gap: 1em;
         width: 20%;
+
+        @include mobile{
+             width: 40%;
+             gap: 0.5em;
+        }
         
 
         & h1{
@@ -268,8 +358,15 @@ nav{
     color: $textColor;
     width: 100%;
 
+    @include mobile{
+             padding: 4em 30px;
+    }
+
     & .heading{
         font-size: 35px;
+        @include mobile{
+             text-align: center;
+        }
     }
 
     & .review_boxes{
@@ -277,6 +374,10 @@ nav{
         width: 100%;
         justify-content: center;
         gap: 3em;
+
+        @include mobile{
+             @include flex(column)
+        }
         
     }
 
@@ -286,6 +387,10 @@ nav{
         gap: 1em;
         border: 2px solid $yellow;
         padding: 2em 3em;
+
+        @include mobile{
+             width: 100%;
+        }
 
         & h1{
             text-transform: uppercase;
@@ -308,6 +413,12 @@ nav{
     position: relative;
     z-index: -3;
 
+    @include mobile{
+             padding: 3em 30px;
+             background-position: centr;
+           
+    }
+
     & h1{
         color: $yellow;
         text-transform: uppercase
@@ -316,6 +427,17 @@ nav{
     & .contact{
         @include flex(row);
         gap: 3em;
+
+        @include mobile{
+             @include flex(column);
+        }
+    }
+
+    & .text{
+        @include mobile{
+             text-align: center;
+
+        }
     }
 
     & .icon{
@@ -343,12 +465,22 @@ footer{
     justify-content: space-between;
     background-color: $darkBlue;
 
+    @include mobile{
+             @include flex(column);
+             gap: 1.5em;
+    }
+
     & .part-1{
         color: $yellow;
         @include flex(row);
         gap: 1.5em;
         text-transform: capitalize;
         font-size: 20px;
+
+        @include mobile{
+            @include flex(column);
+   }
+
     }
 
     & .icons{

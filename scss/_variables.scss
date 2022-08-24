@@ -2,12 +2,19 @@ $yellow:rgba(184, 155, 94, 1);
 $darkGray:rgba(41, 49, 56, 1);
 $darkBlue:rgba(26, 37, 48, 1);
 $textColor:white;
+$mobile:420px;
 
 
 @mixin flex($direction){
     display: flex;
     align-items: center;
     flex-direction: $direction;
+}
+
+@mixin mobile{
+    @media screen and (max-width:$mobile){
+        @content 
+    }
 }
 
 *{
