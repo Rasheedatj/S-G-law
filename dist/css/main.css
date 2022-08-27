@@ -348,6 +348,11 @@ nav .nav_right button:hover {
     gap: 1em;
   }
 }
+@media screen and (max-width: 420px) {
+  .team .avatar #avatar_1 {
+    margin-bottom: 2em;
+  }
+}
 .team .team_member {
   display: flex;
   align-items: center;

@@ -326,7 +326,14 @@ nav{
              flex-wrap: wrap;
              gap: 1em
         }
+        & #avatar_1{
+            @include mobile{
+                margin-bottom: 2em
+            }
+        }
     }
+
+
 
     & .team_member{
         @include flex(column);
